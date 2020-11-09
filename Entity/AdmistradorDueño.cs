@@ -36,7 +36,12 @@ namespace Entity
         public AdmistradorDueño()
         {
         }
+        public decimal CalcularTotalIngresosHotel(IngresosHotel ingresosHotel)
+        {
+            TotalIngresosPensionadoHotel = ingresosHotel.CalcularIngresosHotel();
+            return TotalIngresosPensionadoHotel;
 
+        }
         public decimal CalcularGastosTotalHotel(GastosHotel gastosHotel)
         {
             TotalGastosHotel = gastosHotel.MandarValor();

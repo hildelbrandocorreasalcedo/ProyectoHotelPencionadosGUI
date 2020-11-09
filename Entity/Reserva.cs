@@ -10,12 +10,11 @@ namespace Entity
     {
 
         public decimal CodigoRegistro { get; set; }
-        public string TipoHabitacion { get; set; }
         public DateTime FechaDeEntrada { get; set; }
         public string Estado { get; set; }
         public decimal Precio { get; set; }
 
-
+        
         public string PedirReserva(Habitacion habitacion)
         {
 
