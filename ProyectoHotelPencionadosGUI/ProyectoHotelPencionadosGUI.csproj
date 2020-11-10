@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PrincipalHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalHotel.Designer.cs">
+      <DependentUpon>PrincipalHotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalHotel.resx">
+      <DependentUpon>PrincipalHotel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +98,51 @@
       <Project>{c45fe2dc-1a98-4c01-95ef-839d34cff1a8}</Project>
       <Name>Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window 2_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Businessman_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Businessman_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_ 2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Combo Chart_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ganancias_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize Window_2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize Window_2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Producto_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window 2_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RhaegarlogoBR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Groups_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ventas_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
