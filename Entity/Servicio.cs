@@ -47,7 +47,7 @@ namespace Entity
         }
         public override string ToString()
         {
-            return $"{Comida};{ValorComida};{TipoComida}";
+            return $"{Comida};{ValorComida};{TipoComida};{TotalServicios}";
         }
 
 

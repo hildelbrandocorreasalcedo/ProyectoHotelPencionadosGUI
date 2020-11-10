@@ -8,10 +8,8 @@ namespace Entity
 {
     public class Pensionado:Persona
     {
-       
-        public string CarreraUniversitaria { get; set; }
-
         public Reserva reserva;
+        public string CarreraUniversitaria { get; set; }
 
         public Pensionado(long identificacion, string nombre, string apellido, int telefono, int fechaNacimiento, string carreraUniversitaria)
         {
@@ -26,6 +24,9 @@ namespace Entity
         {
             this.reserva = reserva;
         }
-
+        public override string ToString()
+        {
+            return $"{Identificacion};{Nombre};{Apellido};{FechaNacimiento};{CarreraUniversitaria}";
+        }
     }
 }

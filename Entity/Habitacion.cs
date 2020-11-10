@@ -10,10 +10,31 @@ namespace Entity
     {
         public decimal NumeroPisoHotel { get; set; }
         public decimal NumeroHabitacionHotel { get; set; }
-        public int ValorHabitacion { get; set; }
+        public decimal ValorHabitacion { get; set; }
         public string Estado { get; set; }
 
-        public decimal CalcularValorHabitacion()
+        public string EstadoHabitacion;
+
+        public Habitacion(decimal numeroPisoHotel, decimal numeroHabitacionHotel, decimal valorHabitacion, string estado)
+        {
+            NumeroPisoHotel = numeroPisoHotel;
+            NumeroHabitacionHotel = numeroHabitacionHotel;
+            ValorHabitacion = valorHabitacion;
+            Estado = estado;
+        }
+        public void SacarEstado()
+        {
+
+            if (Estado == "disponible")
+            {
+                EstadoHabitacion = "Habitacion disponible";
+            }
+            else
+            {
+                EstadoHabitacion =  "Habitacion ocupada";
+            }
+        }
+            public decimal CalcularValorHabitacion()
         {
 
             if (NumeroPisoHotel == 1)
@@ -32,7 +53,6 @@ namespace Entity
                 ValorHabitacion = 400000;
             }
             return ValorHabitacion;
-
         }
     }
 }

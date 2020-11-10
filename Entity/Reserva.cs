@@ -8,24 +8,31 @@ namespace Entity
 {
     public class Reserva
     {
-
-        public decimal CodigoRegistro { get; set; }
+        
+        public Habitacion habitacion;
+        public decimal CodigoReserva { get; set; }
         public DateTime FechaDeEntrada { get; set; }
         public string Estado { get; set; }
-        public decimal Precio { get; set; }
 
-        
-        public string PedirReserva(Habitacion habitacion)
+        public decimal PrecioReserva;
+
+        public Reserva(decimal codigoReserva, DateTime fechaDeEntrada, string estado)
+        {
+            CodigoReserva = codigoReserva;
+            FechaDeEntrada = fechaDeEntrada;
+            Estado = estado;
+            
+        }
+        public void PedirHabitacion(Habitacion habitacion)
+        {
+            this.habitacion = habitacion;
+        }
+        public decimal CalcularPrecioReserva(Habitacion habitacion)
         {
 
-            if (habitacion.Estado == "disponible")
-            {
-                return "Habitacion disponible";
-            }
-            else
-            {
-                return "Habitacion ocupada";
-            }
+            PrecioReserva = habitacion.CalcularValorHabitacion();
+            
+            return PrecioReserva;
         }
     }
 }
